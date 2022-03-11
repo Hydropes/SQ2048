@@ -1,0 +1,21 @@
+{
+  "name": "sq2048",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "hbs": "^4.2.0",
+    "vue": "^3.2.31"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

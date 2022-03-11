@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after{
+padding: 0;
+margin: 0;
+border: 0;
+box-sizing: border-box;
+}
+a{
+text-decoration: none;
+}
+ul,
+ol,
+li{
+list-style: none;
+}
+img{
+vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+font-weight: inherit;
+font-size: inherit;
+}
+body{
+height: 100%;
+line-height: 1;
+font-size: 16px;
+color:black;
+}
+@font-face {
+    font-family: "Greek";
+    src: url("./fonts/DalekPinpointBold-lr3e.ttf");
+}
+.wrapper{
+min-height: 100vh;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+
+/* margin: 0; */
+}
+._container{
+    width: 600px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    background-color: rgb(240, 245, 255);
+    
+   
+}
+.header {
+    position:relative;
+    width: 100%;
+    left: 0px;
+    top:0px;
+   
+    /* z-index: 50; */
+    }
+    .header-container {
+    display: flex;
+    min-height: 120px;
+    flex-direction: row;
+    justify-content: space-between;
+    
+   }
+   .header-static{
+       margin: 10px 0 0 0;
+       display: flex;
+       flex-direction: column;
+       
+
+   }
+   .header-registr{
+        display: flex;
+       flex-direction: column;
+       margin: 10px 0 0 0;
+
+   }
+   .header-currentU{
+        display: flex;
+       flex-direction: column;
+       margin: 10px 0 0 0;
+
+   }
+   .__curUserBlock{
+    
+        font-family: Arial, Helvetica, sans-serif;
+       font-style: italic;
+       font-weight: 600;
+       font-size: 30px;
+       color: palevioletred;
+   }
+   .__title{
+       font-family: Arial, Helvetica, sans-serif;
+       font-style: italic;
+       font-weight: 600;
+       font-size: 40px;
+       color: palevioletred;
+       padding: 5px;
+       border-radius: 10px;
+       background-color: #252B42;
+       text-align: center;
+   }
+   .__inputFields{
+       border: 1px solid#252B42;
+       border-radius: 4px;
+   }
+   .__inputBlock{
+       display: flex;
+       flex-direction: column;
+   }
+   button{
+       padding: 5px;
+       background-color: #252B42;
+       border: 1px solid #252B42;
+       border-radius: 5px;
+       color: palevioletred;
+       margin: 5px 0;
+       
+
+   }
+   button:hover{
+       cursor: pointer;
+       background-color:  palevioletred;
+       border-radius: 5px;
+       color: #252B42;
+       border: 1px solid #252B42;
+       /* box-sizing:border-box; */
+   }
+   
+.gameField{
+    border: 2px solid dimgray;
+    border-radius: 5px;
+    background-color: lightgray;
+    max-width: 420px;
+    max-height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0px auto;
+    }
+    .game{
+        display: flex;
+        flex-grow: 1;
+        justify-content: center
+        /* margin: 0px auto; */
+    }
+.__square{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: pink;
+    border: 2px solid palevioletred;
+    box-sizing: border-box;
+   margin: 2px;
+   font-size: 80px;
+   font-weight: bolder;
+   color: rgb(211, 56, 107);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+.square-active{
+    border: 3px solid rgb(211, 56, 107);;
+    background-color: rgb(252, 208, 215);
+}
+.square-yellow{
+    font-size: 60px;
+    color: rgb(235, 190, 45);
+    background-color: rgb(241, 239, 121);
+}
+.square-orange{
+    font-size: 60px;
+    color: darkorange;
+    background-color: rgb(238, 197, 84);
+}
+.square-red{
+    font-size: 40px;
+    color: red;
+    background-color: rgb(240, 140, 116);
+}
+@font-face {
+    font-family: "Greek";
+    src: url("/OpenServer/domains/FrezerMouse/fonts/DalekPinpointBold-lr3e.ttf");
+}
+.__footer{
+    flex-shrink: 0;
+    background-color: #252B42;
+     font-family: "Greek", "Arial", sans-serif;
+    font-size: 18px;
+    color: brown;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+   }

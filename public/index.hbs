@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>2048</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header-container _container">
+          <div class="header-static">
+            <div class="__title">
+              <h1>2048</h1>
+            </div>
+          </div>
+          <div class="header-currentU">
+            <div class="__curUserBlock">
+              <h1>{{title}}</h1>
+            </div>
+            <p>Max score:</p>
+            <p>Max score ever:</p>
+          </div>
+          <div class="header-registr">
+            <form action="" class="registrationUser" name="registerForm">
+              <div class="__inputBlock">
+                <label for="user">User</label>
+                <input class="__inputFields" type="text" name="user" />
+                <label for="pass">Password</label>
+                <input class="__inputFields" type="text" name="pass" />
+              </div>
+              <div class="__buttonBlock">
+                <button type="submit" class="registr" id="registration">Регистрация</button>
+                <button type="submit" class="enter" id="entry">Вход</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+      <main class="game">
+        <div class="game-container _container">
+          <div class="gameField">
+            <!-- <div class="__scuare"></div> -->
+          </div>
+        </div>
+      </main>
+
+      <footer class="__footer">
+        <p>by Hydropes</p>
+        <p>2022</p>
+      </footer>
+    </div>
+    <script type="module" src="../js/app.js"></script>
+    <!-- <script src="./registr.js"></script> -->
+  </body>
+</html>
