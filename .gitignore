@@ -1,3 +1,8 @@
 coords.jpg
 unluckyVars.txt
 node_modules
+index.js
+package.json
+package-lock.json
+.idea
+users.db

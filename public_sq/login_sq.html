@@ -1,0 +1,37 @@
+{% extends 'base_sq.html' %}
+{% block content -%} 
+{{ super() }}
+<div class="registrationUser">
+<h2>Вход:</h2>
+
+              {% for cat, msg in get_flashed_messages(True) %}
+              <div class="flash {{cat}}">
+                {{msg}}
+              </div>
+              {% endfor %}
+              <form  class="" name="loginForm">
+                <div class="inputBlock _registration">
+                  <label for="userName">Пользователь(email):</label>
+                  <input
+                    class="__inputFields"
+                    type="text"
+                    name="userEmail"
+                    value="" required
+                  />
+                  <label for="password">Пароль:</label>
+                  <input
+                    class="__inputFields"
+                    type="text"
+                    name="password"
+                    value="" required
+                  />
+                </div>
+                <div class="__buttonBlock">
+                  <button formaction="/login" formmethod="post" type="submit" class="login" id="">
+                    Вход
+                  </button>
+                  <a class="__linkReg" href="/reg">Регистрация</a>
+                </div>
+              </form>
+            </div>
+{% endblock -%}

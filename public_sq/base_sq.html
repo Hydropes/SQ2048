@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/styles_sq.css')}}" />
+    {% block title -%} {% if title%}
+    <title>SQ2048 -{{title}}</title>
+    {% else %}
+    <title>SQ2048</title>
+    {% endif %} {% endblock -%}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header-container _container">
+          <div class="header-container__top">
+            <a href="/" class="header-container__name"> 2048 </a>
+            <nav class="header-container__menu menu">
+              {% block mainmenu -%}
+              <ul class="menu__list">
+                {% for m in menu -%}
+                <li class="menu__item">
+                  <a href="/{{m.url}}" class="menu_link">{{m.name}}</a>
+                </li>
+                {% endfor -%}
+                {% if current_user.get_id()%}
+                <li class="menu__item">
+                  <a href="{{url_for('logout')}}">Выйти</a>
+                </li>
+                {%endif%}
+              </ul>
+              {% endblock mainmenu -%}
+            </nav>
+          </div>
+          {% if current_user.get_id()%}
+          <div class="header-container__bottom">
+            <div class="__infoUser">
+              <p>Текущий пользователь:</p>
+              <p style="color: palevioletred;">{{current_user.get_name()}}</p>
+            </div>
+             <div class="__infoUser">
+              <p>Текущий счёт:</p>
+              <p id ='currScore' style="color: palevioletred;">0</p>
+            </div>
+             <div class="__infoUser">
+              <p>Рекорд:</p>
+              <p id ='maxScore' style="color: brown;">{{current_user.get_max_score()}}</p>
+            </div>
+          </div>
+        {%endif%}
+          
+        </div>
+      </header>
+      <main class="game">
+        <div class="game-container _container">
+          {% block content -%} {% endblock -%}
+        </div>
+      </main>
+
+      <footer class="__footer">
+          <p>by HydroPes</p>
+          <p>2022</p>
+      </footer>
+    </div>
+    {% if current_user.get_id()%}
+    <script type="module" src="../static/js/app.js"></script>
+    {%endif%}
+  </body>
+</html>

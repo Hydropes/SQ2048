@@ -4,9 +4,8 @@ export function randAdd(arr) {
   if (emptArr.length >= 2) {
     let startCond = Math.floor(Math.random() * emptArr.length, 0);
     arr[emptArr[startCond].id].sum += 2;
-    updateSqr(arr);
+    updateSqr(arr, 0);
     arr[startCond].isAct = true;
-      // document.getElementById(startCond).classList.add("square-active");
     } else {
     console.log("Game Over");
   }

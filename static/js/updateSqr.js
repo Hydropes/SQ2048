@@ -7,6 +7,7 @@ export function updateSqr(arr) {
       arr[i].div.textContent = arrSum[i];
     }
   }
+ 
   arr.map((el) => {
     if (el.sum > 100) {
       el.div.classList.add("square-yellow");

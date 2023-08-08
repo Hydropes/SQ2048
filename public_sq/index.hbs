@@ -18,18 +18,18 @@
           </div>
           <div class="header-currentU">
             <div class="__curUserBlock">
-              <h1>{{title}}</h1>
+             <h1 id="curUser">{{curName}}</h1>
             </div>
-            <p>Max score:</p>
-            <p>Max score ever:</p>
+            <span>Max score: </span><strong id="maxScore"></strong>
+            <span>Max score ever: </span><strong id="maxScoreEver" ></strong>
           </div>
           <div class="header-registr">
             <form action="" class="registrationUser" name="registerForm">
               <div class="__inputBlock">
                 <label for="user">User</label>
-                <input class="__inputFields" type="text" name="user" />
+                <input class="__inputFields" type="text" name="name" value="iii"/>
                 <label for="pass">Password</label>
-                <input class="__inputFields" type="text" name="pass" />
+                <input class="__inputFields" type="text" name="pass" value="aaa"/>
               </div>
               <div class="__buttonBlock">
                 <button type="submit" class="registr" id="registration">Регистрация</button>
@@ -42,7 +42,11 @@
       <main class="game">
         <div class="game-container _container">
           <div class="gameField">
-            <!-- <div class="__scuare"></div> -->
+          </div >
+          <div class="__buttonBlock">
+            <button  class="undo" id="undo">Отмена</button>
+            <button  class="save" id="save">Сохранить</button>
+
           </div>
         </div>
       </main>
@@ -52,7 +56,6 @@
         <p>2022</p>
       </footer>
     </div>
-    <script type="module" src="../js/app.js"></script>
-    <!-- <script src="./registr.js"></script> -->
+      <script type="module" src="../js/app.js"></script> 
   </body>
 </html>

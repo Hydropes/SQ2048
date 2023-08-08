@@ -1,0 +1,19 @@
+{% extends 'base_sq.html' %}
+{% block content -%} 
+{{ super() }}
+    <h1>Текущие рекорды:</h1>
+    <ul class="top__list">
+        <li class="top__line">
+            <p style="font-weight: 600;">Имя</p>
+            <p>-</p>
+            <p style="font-weight: 600;">Счёт</p>
+        </li>
+    {% for t in top -%}
+        <li class="top__line">
+            <p style="color: rgb(211, 56, 107);">{{t.name}}</p>
+             <p>-</p>
+             <p>{{t.score}}</p>     
+        </li>
+    {% endfor -%}
+    </ul>
+{% endblock -%}

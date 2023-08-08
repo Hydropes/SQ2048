@@ -1,0 +1,19 @@
+{% extends 'base_sq.html' %}
+{% block content -%} 
+{{ super() }}
+{% for cat, msg in get_flashed_messages(True) %}
+              <div class="flash {{cat}}">
+                {{msg}}
+              </div>
+              {% endfor %}
+<div class="gameField"></div>
+<div class="__buttonBlock">
+  <!-- <form action="">
+    <button class="undo" id="undo">Отмена</button>
+  <button formaction="/updateScore" formmethod="post" type="submit" class="save" id="save">Сохранить</button>
+  </form> -->
+    <button class="undo" id="undo">Отмена</button>
+  <button  class="save" id="save">Сохранить</button>
+  
+</div>
+{% endblock -%}
